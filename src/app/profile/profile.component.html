@@ -7,7 +7,7 @@
       <nav class="navbar">
         <ul class="navbar-list">
           <li class="navbar-item">
-            <a routerLink="#" class="navbar__link" (click)="openSideBar()"><i class="fa fa-bars"></i></a>
+            <a routerLink="#" class="navbar__link" (clickOutside)="clickedOutside($event)" (click)="openSideBar($event)"><i class="fa fa-bars"></i></a>
           </li>
           <li class="navbar-item">
             <a routerLink="#" class="navbar__link" id="logo"><i class="fa fa-heart" id="heart"></i> uilove</a>

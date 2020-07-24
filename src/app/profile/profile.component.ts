@@ -1,9 +1,10 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
 
@@ -16,7 +17,9 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openSideBar(){
+  openSideBar(event){
+    event.preventDefault();
+    event.stopPropagation();
     if (this.open === false){
       this.open = true;
       this.wrapper.nativeElement.classList.add('section-wrapper');
@@ -24,6 +27,11 @@ export class ProfileComponent implements OnInit {
       this.open = false;
       this.wrapper.nativeElement.classList.remove('section-wrapper');
     }
+  }
+
+  clickedOutside(e: Event){
+    this.open = false;
+    this.wrapper.nativeElement.classList.remove('section-wrapper');
   }
 
 }
