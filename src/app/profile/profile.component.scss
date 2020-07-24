@@ -3,28 +3,41 @@
 .profile{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  align-items: center;
-  justify-items: center;
   background-image: url("../../assets/images/photo.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
+  background-size: 100% auto;
+  height: 100%;
 }
 .layer{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
   background-color: $green;
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-items: center;
 }
 .profile-title{
   font-family: blackjar, serif;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 0.5em;
-  font-size: 45px;
+  gap: 0.3em;
+  font-size: 4em;
+  padding-top: 2em;
 }
 
 .profile-content{
   font-family: newCicleFina, serif;
-  font-size: 18px;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+#first{
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
+}
+#second{
+  font-size: 1.4em;
 }
 
 .icon{
