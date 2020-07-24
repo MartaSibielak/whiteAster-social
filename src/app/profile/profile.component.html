@@ -1,30 +1,38 @@
-<section class="profile">
-  <div class="layer">
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item">
-          <a routerLink="#" class="navbar__link"><i class="fa fa-bars"></i></a>
-        </li>
-        <li class="navbar-item">
-          <a routerLink="#" class="navbar__link" id="logo"><i class="fa fa-heart" id="heart"></i> uilove</a>
-        </li>
-        <li class="navbar-item">
-          <a routerLink="#" class="navbar__link">
-            <i class="fa fa-suitcase"></i></a>
-        </li>
-      </ul>
-    </nav>
-    <div class="profile-wrapper">
-      <div class="profile-title"><p class="white" id="principal">Principal </p><p class="pink" id="designers">Designer</p></div>
-      <div class="profile-content">
-        <p id="first" class="white">who believe in simplicity.</p>
-        <p id="second" class="pink">love with UI / GUI / UX</p>
-      </div>
-      <div class="profile-nav-icons">
-        <a class="icon" routerLink="#"><i class="fa fa-dribbble font-awesome"></i></a>
-        <a class="icon" routerLink="#"><i id="forrst"><img src="./../assets/images/forrst.png"></i></a>
-        <a class="icon" routerLink="#"><i class="fa fa-behance font-awesome"></i></a>
+<div #wrapper>
+  <div class="sidebar" *ngIf="open">
+    <app-sidebar></app-sidebar>
+  </div>
+  <section class="profile">
+    <div class="layer">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a routerLink="#" class="navbar__link" (click)="openSideBar()"><i class="fa fa-bars"></i></a>
+          </li>
+          <li class="navbar-item">
+            <a routerLink="#" class="navbar__link" id="logo"><i class="fa fa-heart" id="heart"></i> uilove</a>
+          </li>
+          <li class="navbar-item">
+            <a routerLink="#" class="navbar__link">
+              <i class="fa fa-suitcase"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="profile-wrapper">
+        <div class="profile-title"><p class="white" id="principal">Principal </p><p class="pink" id="designers">Designer</p></div>
+        <div class="profile-content">
+          <p id="first" class="white">who believe in simplicity.</p>
+          <p id="second" class="pink">love with UI / GUI / UX</p>
+        </div>
+        <div class="profile-nav-icons">
+          <a class="icon" routerLink="#"><i class="fa fa-dribbble font-awesome"></i></a>
+          <a class="icon" routerLink="#"><i id="forrst"><img src="./../assets/images/forrst.png"></i></a>
+          <a class="icon" routerLink="#"><i class="fa fa-behance font-awesome"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <div class="messages-wrapper">
+      <app-messages></app-messages>
+    </div>
+  </section>
+</div>

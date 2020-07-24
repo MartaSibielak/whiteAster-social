@@ -5,6 +5,8 @@
   grid-template-columns: repeat(1, 1fr);
   background-image: url("../../assets/images/photo.jpg");
   background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
   background-size: 100% auto;
   height: 100%;
   border-radius: 0.8em;
@@ -22,6 +24,8 @@
   border-radius: 0.8em;
 }
 .profile-title{
+  width: 100%;
+  height: auto;
   font-family: blackjar, serif;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -30,6 +34,8 @@
 }
 
 .profile-content{
+  width: 100%;
+  height: auto;
   font-family: newCicleFina, serif;
   text-align: center;
   padding-bottom: 3em;
@@ -83,7 +89,7 @@
 
 #forrst img{
   width: 100%;
-  max-width: 0.9em;
+  min-width: 0.9em;
 }
 .font-awesome{
   opacity: 80%;
@@ -115,4 +121,18 @@ a{
   text-decoration: none;
   list-style: none;
   color: $light;
+}
+
+.section-wrapper{
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+}
+.messages-wrapper{
+  transform: translateY(-35px);
+}
+img{
+  z-index: -10;
+  width: 100%;
+  height: auto;
 }
