@@ -1,5 +1,5 @@
 $background-color: #1B2026;
-$green: #1A5863;
+$green: rgba(26, 88, 99, 0.55);
 $pink: #F46E6B;
 $dark-grey: #504A4E;
 $light-grey: #7F8386;
@@ -7,3 +7,15 @@ $light: #F2F0EF;
 $beige: #B9ADA8;
 $brown: #9A5E5D;
 
+@font-face {
+  font-family: blackjar;
+  src: url("../fonts/BLACKJAR.TTF");
+}
+@font-face {
+  font-family: newCicleFina;
+  src: url("../fonts/New Cicle Fina.otf");
+}
+@font-face {
+  font-family: newCicleFinaItalic;
+  src: url("../fonts/New Cicle Fina Italic.otf");
+}
