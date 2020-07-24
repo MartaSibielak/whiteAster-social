@@ -66,6 +66,12 @@ a{
   padding-top: 1em;
   border-top: solid 1px $dark-grey;
 }
+.navbar-item:hover{
+  background-color: #151a1d;
+  .navbar-badge{
+    background-color: $green;
+  }
+}
 .navbar-text{
   text-align: left;
   align-self: center;
