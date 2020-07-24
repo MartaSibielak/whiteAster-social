@@ -8,9 +8,11 @@
   background-size: 100% auto;
   height: 100%;
 }
-.layer{
+.profile-wrapper{
   display: grid;
   grid-template-columns: repeat(1,1fr);
+}
+.layer{
   background-color: $green;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +23,6 @@
   font-family: blackjar, serif;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap: 0.3em;
   font-size: 4em;
   padding-top: 2em;
 }
@@ -39,20 +40,36 @@
 #second{
   font-size: 1.4em;
 }
+#principal{
+  text-align: end;
+  margin-right: 0.2em;
+}
+#designers{
+  text-align: left;
+  margin-left: 0.2em;
+}
+#logo{
+  font-family: blackjar, serif;
+  font-size: 1.2em;
+}
+#heart{
+  color: $pink;
+  font-size: 0.8em;
+}
 
 .icon{
   display: grid;
   text-decoration: none;
+  margin: 0.8em;
   color: $light;
-  margin: 0.5em;
   font-size: 2em;
   justify-content: center;
   align-content: center;
   opacity: 80%;
 }
 .profile-nav-icons{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  display: flex;
+  justify-content: center;
 }
 
 .white{
@@ -70,3 +87,30 @@
   opacity: 80%;
 }
 
+
+
+//NAVBAR
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 2em 0;
+}
+ul{
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+li{
+  font-size: 2.1em;
+
+
+}
+a{
+  text-decoration: none;
+  list-style: none;
+  color: $light;
+}
