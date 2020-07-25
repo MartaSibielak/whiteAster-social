@@ -40,7 +40,6 @@
   font-size: 3em;
 }
 
-
 //OPTION PANEL
 .option-panel{
   background-image: url("../../assets/images/option.png");
@@ -50,8 +49,6 @@
   border-left: solid 0.5em $light-green;
   text-align: center;
   height: 100%;
-  //padding-left: 1em;
-  //padding-right: 1em;
 }
 .layer{
   display: grid;
@@ -64,6 +61,7 @@
   display: grid;
   grid-template-columns: repeat(3,1fr);
   padding: 2.5em;
+  gap: 1.6em;
 }
 .icon-option-panel{
   font-size: 2em;
@@ -72,3 +70,5 @@
 .icon-option-panel:hover{
   color: $light;
 }
+
+
