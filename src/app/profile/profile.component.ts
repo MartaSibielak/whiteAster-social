@@ -1,4 +1,6 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {MessagesService} from "../messages.service";
+import {Message} from "../messages/message.model";
 
 
 @Component({
@@ -10,12 +12,10 @@ export class ProfileComponent implements OnInit {
 
   @ViewChild('wrapper')
   private wrapper: ElementRef;
-
   open = false;
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   openSideBar(event){
     event.preventDefault();

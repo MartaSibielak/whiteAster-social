@@ -1,11 +1,13 @@
 import {Message} from "./messages/message.model";
 import {Subject} from "rxjs";
+import {Injectable} from "@angular/core";
 
+@Injectable({providedIn: 'root'})
 export class MessagesService {
 
   private messagesUpdated = new Subject<Message[]>();
 
-  messages: Message[] = [
+   private messages: Message[] = [
     {
       id: 0,
       icon: 'fa fa-mobile',
@@ -40,6 +42,10 @@ export class MessagesService {
     }
   ];
 
+   getMessagesList(){
+      return [...this.messages]
+   }
+
   onDelete(id: number){
     const updateMessages = this.messages.filter(message => message.id !== id);
     this.messages = updateMessages;
@@ -58,4 +64,6 @@ export class MessagesService {
       this.messages[index] = message;
     }
   }
+
+
 }

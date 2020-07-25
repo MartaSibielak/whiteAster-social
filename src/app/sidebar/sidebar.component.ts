@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {MessagesService} from "../messages.service";
+import {Message} from "../messages/message.model";
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  @Input() messages: Message[] = [];
+  messageLengh: number = 0;
+  constructor(private messagesService: MessagesService) { }
 
   ngOnInit(): void {
+    this.messages = this.messagesService.getMessagesList();
+    this.messageLengh = this.messages.length
+    console.log(this.messageLengh)
+  }
+
+  onGetMessages(message){
+    this.messages.push(message);
   }
 
 }

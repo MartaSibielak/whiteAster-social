@@ -22,4 +22,4 @@
     </div>
   </div>
 </section>
-<p class="no-message">No new messages</p>
+<p class="no-message" *ngIf="messages.length <= 0">No new messages</p>
