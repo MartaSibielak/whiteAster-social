@@ -3,8 +3,8 @@
     <div class="message-icon"><i class="{{message.icon}} icon"></i></div>
     <div class="message-content">
       <div class="message-header">
-        <div class="message-time">{{message.time | date : 'short'}}</div>
-        <div class="message-author">by: {{message.author}}</div>
+        <div class="message-time">{{message.time | dateAgo }}</div>
+        <div class="message-author">by: {{message.author | titlecase}}</div>
       </div>
       <div class="message-text">{{message.content}}</div>
     </div>

@@ -7,13 +7,16 @@ import { ProfileComponent } from './profile/profile.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { DateAgoPipe } from './date-ago.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     MessagesComponent,
-    SidebarComponent
+    SidebarComponent,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,

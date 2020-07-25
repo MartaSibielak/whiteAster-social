@@ -21,7 +21,7 @@
 }
 .message-header{
   display: grid;
-  grid-template-columns: 7em 10em;
+  grid-template-columns: 9em 10em;
   margin: 0.9em 0.4em 0.4em;
   font-weight: 600;
 }
@@ -31,7 +31,10 @@
   margin: 0.4em;
   font-size: 1.3em;
 }
+.message-time{
+  font-size: 1em;
+}
 
 .icon{
-  font-size: 4em;
+  font-size: 3em;
 }
