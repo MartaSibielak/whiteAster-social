@@ -6,6 +6,16 @@
   height: 100%;
   font-family: newCicleFina, serif;
 }
+.no-message{
+  background-color: $pink;
+  border-radius: 2em 2em 0 0;
+  height: 100%;
+  font-family: newCicleFina, serif;
+  color: $light;
+  font-size: 18px;
+  text-align: center;
+  padding: 0.5em;
+}
 .message{
   color: $light;
   display: grid;
@@ -56,6 +66,7 @@
   background-color: $green;
   z-index: 10;
   width: 100%;
+  padding-bottom: 12em;
 }
 .option-nav-icons{
   display: grid;
