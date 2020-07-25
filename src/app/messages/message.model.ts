@@ -3,4 +3,5 @@ export interface Message {
   time: Date;
   author: string;
   content: string;
+  like: boolean;
 }

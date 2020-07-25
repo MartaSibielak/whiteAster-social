@@ -9,7 +9,6 @@ import {DatePipe} from "@angular/common";
 })
 export class MessagesComponent implements OnInit {
 
-  private date = new Date();
   constructor(){}
 
   ngOnInit(): void {
@@ -20,26 +19,34 @@ export class MessagesComponent implements OnInit {
       icon: 'fa fa-mobile',
       time: new Date("July 21, 2019 01:15:00"),
       author: 'Mike | Creative Mints',
-      content: 'Mechanical Grasshopper'
+      content: 'Mechanical Grasshopper',
+      like: false
     },
     {
       icon: 'fa fa-cloud',
       time: new Date("July 25, 2020 10:45:00"),
       author: 'Dash',
-      content: 'Assistant App - Weather Module'
+      content: 'Assistant App - Weather Module',
+      like: false
     },
     {
       icon: 'fa fa-globe',
       time: new Date("July 24, 2020 10:45:00"),
       author: 'Ghulam ツ',
-      content: 'Upcoming web agency'
+      content: 'Upcoming web agency',
+      like: false
     },
     {
       icon: 'fa fa-desktop',
       time: new Date("July 24, 2020 10:45:00"),
       author: 'Bill S Kenney',
-      content: 'Bamboo Branding Wall Piece - not flat'
+      content: 'Bamboo Branding Wall Piece - not flat',
+      like: false
     }
-  ]
+  ];
+
+  displayOption(){
+
+  }
 
 }

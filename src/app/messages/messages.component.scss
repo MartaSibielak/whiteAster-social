@@ -9,8 +9,9 @@
 .message{
   color: $light;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 10% 60% 30%;
   border-bottom: solid 0.01px rgba(255, 255, 255, 0.51);
+  padding-left: 1em;
 }
 .message-content{
   margin: 1em;
@@ -37,4 +38,37 @@
 
 .icon{
   font-size: 3em;
+}
+
+
+//OPTION PANEL
+.option-panel{
+  background-image: url("../../assets/images/option.png");
+  background-repeat: no-repeat;
+  bottom: 0;
+  right: 0;
+  border-left: solid 0.5em $light-green;
+  text-align: center;
+  height: 100%;
+  //padding-left: 1em;
+  //padding-right: 1em;
+}
+.layer{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  background-color: $green;
+  z-index: 10;
+  width: 100%;
+}
+.option-nav-icons{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 2.5em;
+}
+.icon-option-panel{
+  font-size: 2em;
+  color: $light-grey;
+}
+.icon-option-panel:hover{
+  color: $light;
 }
