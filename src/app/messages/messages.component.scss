@@ -26,6 +26,8 @@
   grid-template-columns: 10% 60% 30%;
   border-bottom: solid 0.01px rgba(255, 255, 255, 0.51);
   padding-left: 1em;
+  align-content: center;
+  align-items: center;
 }
 .message-content{
   margin: 1em;
@@ -57,6 +59,20 @@
 //OPTION PANEL
 .option-panel__wrapper{
   display: none;
+  animation: toggleOptionMenu;
+  animation-direction: initial;
+  animation-duration: 400ms;
+}
+
+@keyframes toggleOptionMenu {
+  from {
+    margin-right: 100%;
+    width: 300%;
+  }
+  to {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 .option-panel{
   background-image: url("../../assets/images/option.png");
@@ -77,7 +93,7 @@
 .option-nav-icons{
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  padding: 2.5em;
+  padding: 2.13em;
   gap: 1.6em;
 }
 .icon-option-panel{
@@ -88,4 +104,35 @@
   color: $light;
 }
 
+
+@media (max-width: 500px) {
+  .message-content{
+    margin: 0.3em;
+  }
+  .message-header{
+    grid-template-columns: 9em 10em;
+  }
+  .message-text{
+    margin: 0.2em;
+    font-size: 0.8em;
+  }
+  .message-time{
+    font-size: 0.6em;
+  }
+  .message-author{
+    font-size: 0.6em;
+  }
+  .icon{
+    font-size: 1.5em;
+    padding-left: 0.2em;
+  }
+  .option-nav-icons{
+    padding: 1.25em;
+    gap: 0.6em;
+  }
+  .icon-option-panel{
+    font-size: 1em;
+  }
+
+}
 

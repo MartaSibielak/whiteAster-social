@@ -1,11 +1,8 @@
 import {Message} from "./messages/message.model";
-import {Subject} from "rxjs";
 import {Injectable} from "@angular/core";
 
 @Injectable({providedIn: 'root'})
 export class MessagesService {
-
-  private messagesUpdated = new Subject<Message[]>();
 
    private messages: Message[] = [
     {
@@ -28,7 +25,7 @@ export class MessagesService {
       id: 2,
       icon: 'fa fa-globe',
       time: new Date("July 24, 2020 10:45:00"),
-      author: 'Ghulam ツ',
+      author: 'Ghulam ',
       content: 'Upcoming web agency',
       like: false
     },
@@ -45,13 +42,6 @@ export class MessagesService {
    getMessagesList(){
       return [...this.messages]
    }
-
-  onDelete(id: number){
-    const updateMessages = this.messages.filter(message => message.id !== id);
-    this.messages = updateMessages;
-    this.messagesUpdated.next([...this.messages]);
-    console.log('deleted message id ' + id);
-  }
 
   onLiked(message){
     if (message.like === false){

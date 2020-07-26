@@ -1,7 +1,4 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {MessagesService} from "../messages.service";
-import {Message} from "../messages/message.model";
-
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -13,6 +10,7 @@ export class ProfileComponent implements OnInit {
   @ViewChild('wrapper')
   private wrapper: ElementRef;
   open = false;
+
   constructor() { }
 
   ngOnInit(): void {}
@@ -33,5 +31,4 @@ export class ProfileComponent implements OnInit {
     this.open = false;
     this.wrapper.nativeElement.classList.remove('section-wrapper');
   }
-
 }

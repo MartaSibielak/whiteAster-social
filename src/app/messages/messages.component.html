@@ -1,5 +1,4 @@
 <section class="messages" *ngIf="messages.length > 0">
-
   <div class="message" *ngFor="let message of messages; let i = index"
        (click)="toggleBox(i)">
     <div class="message-icon"><i class="{{message.icon}} icon"></i></div>
@@ -23,5 +22,5 @@
     </div>
   </div>
 </section>
-
 <p class="no-message" *ngIf="messages.length <= 0">No new messages</p>
+

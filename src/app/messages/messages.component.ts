@@ -30,10 +30,10 @@ export class MessagesComponent implements OnInit, AfterViewInit {
     this.messages = this.messagesService.getMessagesList()
   }
 
-
   ngAfterViewInit(){
-    this.option.changes.subscribe((list) => {
-      console.log("Native element", list.toArray()[0].nativeElement);
+    this.option.changes.subscribe((list?) => {
+      list.toArray()[0].nativeElement;
+      console.log(list)
     })
   }
 
@@ -43,22 +43,6 @@ export class MessagesComponent implements OnInit, AfterViewInit {
     this.messagesUpdated.next([...this.messages]);
     console.log('deleted message id ' + id);
   }
-  //
-  // onLiked(message){
-  //   if (message.like === false){
-  //     let index = this.messages.indexOf(message);
-  //     message.like = true;
-  //     this.messages[index] = message;
-  //   } else {
-  //     let index = this.messages.indexOf(message);
-  //     message.like = false;
-  //     this.messages[index] = message;
-  //   }
-  // }
-
-  // onDelete(id){
-  //   this.messagesService.onDelete(id);
-  // }
 
   onLiked(message){
     this.messagesService.onLiked(message);

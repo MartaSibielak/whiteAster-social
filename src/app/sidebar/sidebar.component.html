@@ -1,4 +1,3 @@
-
 <section class="sidebar">
   <div class="profile">
     <div class="nav-item">
@@ -16,7 +15,7 @@
   <div class="navbar">
     <ul class="navbar-list">
       <li class="navbar-item">
-          <a routerLink="/" class="navbar__link" *ngIf="messages">
+          <a routerLink="messages" class="navbar__link" *ngIf="messages">
             <i class="fa fa-envelope icon"></i>
             <p class="navbar-text">Mail Inbox</p>
             <span class="navbar-badge">{{messages.length || '0'}}</span>
@@ -40,16 +39,15 @@
         <a routerLink="/" class="navbar__link">
           <i class="fa fa-check-circle icon"></i>
           <p class="navbar-text">Bookmarks</p>
-          <span class="navbar-badge"></span>
         </a>
       </li>
       <li class="navbar-item">
         <a routerLink="/" class="navbar__link">
           <i class="fa fa-cog icon"></i>
           <p class="navbar-text">Settings</p>
-<!--          <span class="navbar-badge"></span>-->
         </a>
       </li>
     </ul>
   </div>
 </section>
+
