@@ -1,5 +1,9 @@
 @import '../../assets/scss/variables';
 
+.messages-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
 .messages{
   background-color: $pink;
   border-radius: 2em 2em 0 0;
@@ -51,6 +55,9 @@
 }
 
 //OPTION PANEL
+.option-panel__wrapper{
+  display: none;
+}
 .option-panel{
   background-image: url("../../assets/images/option.png");
   background-repeat: no-repeat;

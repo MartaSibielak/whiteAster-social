@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { DateAgoPipe } from './date-ago.pipe';
+import { MessageOptionComponent } from './message-option/message-option.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DateAgoPipe } from './date-ago.pipe';
     ProfileComponent,
     MessagesComponent,
     SidebarComponent,
-    DateAgoPipe
+    DateAgoPipe,
+    MessageOptionComponent
   ],
   imports: [
     BrowserModule,

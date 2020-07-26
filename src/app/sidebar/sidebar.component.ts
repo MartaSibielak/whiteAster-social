@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MessagesService} from "../messages.service";
 import {Message} from "../messages/message.model";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +11,7 @@ import {Message} from "../messages/message.model";
 export class SidebarComponent implements OnInit {
 
   @Input() messages: Message[] = [];
+  private messagesUpdated = new Subject<Message[]>();
   messageLengh: number = 0;
   constructor(private messagesService: MessagesService) { }
 

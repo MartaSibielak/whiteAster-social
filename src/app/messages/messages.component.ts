@@ -1,4 +1,12 @@
-import {Component, ElementRef, OnInit, Output, ViewChild, EventEmitter, Input} from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+  Input,
+  ViewChildren,
+  QueryList, AfterViewInit
+} from '@angular/core';
 import {Message} from "./message.model";
 import {Subject} from "rxjs";
 import {MessagesService} from "../messages.service";
@@ -8,13 +16,13 @@ import {MessagesService} from "../messages.service";
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.scss']
 })
-export class MessagesComponent implements OnInit {
+export class MessagesComponent implements OnInit, AfterViewInit {
 
   private messagesUpdated = new Subject<Message[]>();
   @Input() messages: Message[] = [];
   @ViewChild('likedIcon')
   private likedIcon: ElementRef;
-  private open = false;
+  @ViewChildren("option") private option: QueryList<ElementRef>;
 
   constructor(public messagesService: MessagesService){}
 
@@ -22,16 +30,19 @@ export class MessagesComponent implements OnInit {
     this.messages = this.messagesService.getMessagesList()
   }
 
-  displayOption(){
-    this.open = true;
+
+  ngAfterViewInit(){
+    this.option.changes.subscribe((list) => {
+      console.log("Native element", list.toArray()[0].nativeElement);
+    })
   }
 
-  // onDelete(id: number){
-  //   const updateMessages = this.messages.filter(message => message.id !== id);
-  //   this.messages = updateMessages;
-  //   this.messagesUpdated.next([...this.messages]);
-  //   console.log('deleted message id ' + id);
-  // }
+  onDelete(id: number){
+    const updateMessages = this.messages.filter(message => message.id !== id);
+    this.messages = updateMessages;
+    this.messagesUpdated.next([...this.messages]);
+    console.log('deleted message id ' + id);
+  }
   //
   // onLiked(message){
   //   if (message.like === false){
@@ -45,12 +56,18 @@ export class MessagesComponent implements OnInit {
   //   }
   // }
 
-  onDelete(id){
-    this.messagesService.onDelete(id);
-  }
+  // onDelete(id){
+  //   this.messagesService.onDelete(id);
+  // }
 
   onLiked(message){
     this.messagesService.onLiked(message);
+  }
+
+  toggleBox(index){
+    let nativeElement = this.option.toArray()[index].nativeElement;
+    nativeElement.style.display =
+      nativeElement.style.display === "none" || !nativeElement.style.display ? "block" : "none";
   }
 
 }
